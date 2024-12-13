@@ -89,7 +89,7 @@ Follow the instructions below on how to configure the authentication:
     - **Salt Position**: Determines how salt (random data) is added to the password. Options are `suffix`, `prefix`, or `disable`. Retain the default setting unless migrating credentials from external storage to the EMQX built-in database. Note: Set to `disable` if `plain` is chosen.
   - For `bcrypt`:
     - **Salt Rounds**: Set the number of times the hash function executes, denoted as 2^Salt Rounds, also known as the "cost factor". The default is `10`, with a range of `5` to `10`. A higher value is recommended for enhanced security. Note: Increasing the cost factor by 1 doubles the necessary time for authentication.
-  - For `pkbdf2`:
+  - For `pbkdf2`:
     - **Pseudorandom Function**: Specify the Hash functions to generate the key, such as `sha256`. 
     - **Iteration Count**: Specify the iteration times; Default: `4096`.
     - **Derived Key Length** (optional): Specify the length of the generated password. You can leave this field blank, then the key length will be determined by the pseudorandom function you selected. 
